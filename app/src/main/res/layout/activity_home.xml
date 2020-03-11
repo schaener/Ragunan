@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="14dp"
+    android:background="#f6f6f6"
+    tools:context=".ui.Home">
+<LinearLayout
+
+    android:orientation="vertical"
+    android:layout_weight="1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btOn"
+
+     app:cardBackgroundColor="@color/colorPrimary"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+<TextView
+    android:textStyle="bold"
+    android:textColor="#ffff"
+    android:textSize="26sp"
+    android:gravity="center"
+    android:text="ON"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</TextView>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btOff"
+            app:cardBackgroundColor="@color/colorAccent"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textStyle="bold"
+                android:textColor="#ffff"
+                android:textSize="26sp"
+                android:gravity="center"
+                android:text="OFF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></TextView>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/gambar"
+            android:src="@drawable/warning"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ImageView>
+    </LinearLayout>
+
+</LinearLayout>
+
+</LinearLayout>

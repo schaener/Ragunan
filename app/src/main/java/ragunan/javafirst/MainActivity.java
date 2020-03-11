@@ -1,7 +1,11 @@
 package ragunan.javafirst;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
+import android.app.AlarmManager;
+import android.app.Notification;
+import android.app.PendingIntent;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
@@ -12,6 +16,7 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.SystemClock;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -24,6 +29,10 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+
+import ragunan.javafirst.Notification.MyNotificationPublisher;
+
+import static android.app.Notification.EXTRA_NOTIFICATION_ID;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
     BluetoothAdapter bluetoothAdapter = null;
     ArrayList<BluetoothDevice> arrayListBluetoothDevices = null;
     ListItemClicked listItemClicked;
+    private NotificationCompat.Builder notificationBuilder;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -204,7 +215,32 @@ public class MainActivity extends AppCompatActivity {
         return returnValue.booleanValue();
     }
 
+    public void bluetoothScanning(){
 
+        IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
+      getApplicationContext().registerReceiver(mReceiver, filter);
+        final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        mBluetoothAdapter.startDiscovery();
+
+    }
+
+
+    // Create a BroadcastReceiver for ACTION_FOUND.
+    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            if (BluetoothDevice.ACTION_FOUND.equals(action)) {
+                // Discovery has found a device. Get the BluetoothDevice
+                // object and its info from the Intent.
+                BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+                String deviceName = device.getName();
+                String deviceHardwareAddress = device.getAddress(); // MAC address
+Toast.makeText(getApplicationContext(),"Device Name: " + "device " + deviceName,Toast.LENGTH_SHORT).show();
+     Toast.makeText(getApplicationContext(),"deviceHardwareAddress " + "hard"  + deviceHardwareAddress,Toast.LENGTH_SHORT).show();
+
+            }
+        }
+    };
     class ButtonClicked implements View.OnClickListener
     {
         @Override
@@ -218,10 +254,12 @@ public class MainActivity extends AppCompatActivity {
                     startSearching();
                     break;
                 case R.id.buttonDesc:
-                    makeDiscoverable();
+                //    makeDiscoverable();
+                    bluetoothScanning();
                     break;
                 case R.id.buttonOff:
-                    offBluetooth();
+                   // offBluetooth();
+
                     break;
                 default:
                     break;
@@ -286,11 +324,13 @@ public class MainActivity extends AppCompatActivity {
             Log.i("Log", "Bluetooth is Enabled");
         }
     }
+
     private void offBluetooth() {
         if(bluetoothAdapter.isEnabled())
         {
             bluetoothAdapter.disable();
         }
+
     }
     private void makeDiscoverable() {
         Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
