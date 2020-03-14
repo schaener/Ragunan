@@ -5,7 +5,14 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,17 +20,47 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.Home">
+        <activity android:name=".ui.Main.Content.QrCodeScanner.QrCodeScanner">
 
+
+        </activity>
+        <activity android:name=".ui.Main.Content.YoutubePlayer.PlayYoutube" />
+        <activity
+            android:name="info.vividcode.android.zxing.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.zxing.client.android.SCAN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".ui.Main.Content.Detail.DetailContent" >
+
+
+        </activity>
+        <activity android:name=".ui.Main.Content.Intro.Content" />
+        <activity android:name=".ui.Main.Transaction.Intro.IntroTransaction" />
+        <activity android:name=".ui.Front.Splashscreen.Splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".ui.Main.Home.Home" />
+        <activity android:name=".MainActivity" />
 
         <receiver android:name=".Notification.MyNotificationPublisher" />
     </application>

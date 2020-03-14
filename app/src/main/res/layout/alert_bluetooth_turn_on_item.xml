@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="28sp"
+    app:cardBackgroundColor="#FFFFFF"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.cardview.widget.CardView
+
+    app:cardBackgroundColor="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+android:padding="26sp"
+  android:justificationMode="inter_word"
+        android:textStyle="normal|bold"
+        android:textColor="#596FEA"
+
+        android:gravity="center|top"
+        android:textSize="20sp"
+        android:text="Hidupkan Bluetooth Untuk Pengalaman Yang lebih Mengesankan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></TextView>
+    <LinearLayout
+        android:id="@+id/Bok"
+        android:background="#E6E6E6"
+android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <TextView
+            android:justificationMode="inter_word"
+            android:textStyle="normal|bold"
+            android:textColor="#596FEA"
+            android:gravity="center"
+            android:textSize="26sp"
+            android:text="OK"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></TextView>
+    </LinearLayout>
+
+</RelativeLayout>
+  </androidx.cardview.widget.CardView>
+</androidx.cardview.widget.CardView>
