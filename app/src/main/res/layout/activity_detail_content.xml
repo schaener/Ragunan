@@ -11,7 +11,7 @@
     android:textStyle="bold"
     android:textSize="26sp"
     android:text="Kandang Jerapah"
-    android:textColor="#8028FF"
+    android:textColor="#6780D2"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -25,7 +25,7 @@
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="25dp"
             android:id="@+id/CVvideo"
-app:cardBackgroundColor="#7C20FF"
+app:cardBackgroundColor="#6780D2 "
             android:layout_width="match_parent"
             android:layout_height="180sp">
 <LinearLayout
@@ -36,7 +36,7 @@ app:cardBackgroundColor="#7C20FF"
     android:layout_height="match_parent">
     <ImageView
         android:layout_weight="1"
-        android:src="@drawable/jerapah"
+        android:src="@drawable/jerapahicn"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -76,7 +76,7 @@ app:cardBackgroundColor="#7C20FF"
             </androidx.cardview.widget.CardView>
 <LinearLayout
 
-
+android:padding="15dp"
     android:layout_width="match_parent"
     android:layout_height="80dp">
     <LinearLayout
@@ -90,7 +90,7 @@ app:cardBackgroundColor="#7C20FF"
             android:layout_weight="1"
             android:layout_gravity="center"
             app:cardCornerRadius="25dp"
-            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardBackgroundColor="#6780D2 "
             android:layout_width="match_parent"
             android:layout_height="60dp">
 
@@ -103,26 +103,21 @@ app:cardBackgroundColor="#7C20FF"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"></TextView>
         </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/CVQr"
-           android:padding="25dp"
-            android:layout_gravity="center"
-            app:cardCornerRadius="25dp"
 
-            android:layout_width="70dp"
-            android:layout_height="60dp">
 <ImageView
-    android:src="@drawable/qrcode2"
+    android:layout_weight="1"
+    android:id="@+id/CVQr"
+    android:src="@drawable/qrscan"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 </ImageView>
-              </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:layout_weight="1"
             android:layout_gravity="center"
             app:cardCornerRadius="25dp"
-            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardBackgroundColor="#6780D2 "
             android:layout_width="match_parent"
             android:layout_height="60dp">
 

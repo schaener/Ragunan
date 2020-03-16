@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import info.vividcode.android.zxing.CaptureActivity;
@@ -16,7 +17,8 @@ import ragunan.javafirst.ui.Main.Content.QrCodeScanner.QrCodeScanner;
 import ragunan.javafirst.ui.Main.Content.YoutubePlayer.PlayYoutube;
 
 public class DetailContent extends AppCompatActivity {
-CardView video,share,Qr;
+CardView video,share;
+ImageView Qr;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

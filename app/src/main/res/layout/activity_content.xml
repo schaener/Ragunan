@@ -33,7 +33,7 @@
 <androidx.cardview.widget.CardView
     android:id="@+id/CVContent"
 android:visibility="invisible"
-    app:cardBackgroundColor="@color/colorPrimary"
+    app:cardBackgroundColor="#6780D2"
     app:cardCornerRadius="25dp"
     android:layout_marginTop="10dp"
     android:layout_below="@id/Label1"
@@ -46,7 +46,7 @@ android:visibility="invisible"
         android:padding="12dp"
         android:layout_height="match_parent">
         <ImageView
-            android:src="@drawable/jerapah"
+            android:src="@drawable/jerapahicn"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent">

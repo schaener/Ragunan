@@ -21,6 +21,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import ragunan.javafirst.Notification.MyNotificationPublisher;
@@ -29,7 +30,8 @@ import ragunan.javafirst.ui.Main.Content.Intro.Content;
 import ragunan.javafirst.ui.Main.Transaction.Intro.IntroTransaction;
 
 public class Home extends AppCompatActivity {
-CardView btOn,btOff,startJourney,buy;
+CardView btOn,btOff;
+RelativeLayout startJourney,buy;
 ImageView img;
     BluetoothAdapter bluetoothAdapter = null;
     Thread thread;

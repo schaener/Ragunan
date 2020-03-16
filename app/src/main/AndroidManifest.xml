@@ -12,18 +12,17 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logotmii"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logotmii"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.Main.Content.QrCodeScanner.QrCodeScanner">
-
-
-        </activity>
+        <activity android:name=".ui.Main.Transaction.Detail.TransactionDetail"></activity>
+        <activity android:name=".ui.Main.Content.QrCodeScanner.QrCodeScanner"></activity>
         <activity android:name=".ui.Main.Content.YoutubePlayer.PlayYoutube" />
         <activity
             android:name="info.vividcode.android.zxing.CaptureActivity"
@@ -42,14 +41,12 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".ui.Main.Content.Detail.DetailContent" >
-
-
-        </activity>
+        <activity android:name=".ui.Main.Content.Detail.DetailContent"></activity>
         <activity android:name=".ui.Main.Content.Intro.Content" />
         <activity android:name=".ui.Main.Transaction.Intro.IntroTransaction" />
         <activity android:name=".ui.Front.Splashscreen.Splashscreen">
