@@ -21,8 +21,11 @@
         android:roundIcon="@drawable/logotmii"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.Main.Transaction.Detail.TransactionDetail"></activity>
-        <activity android:name=".ui.Main.Content.QrCodeScanner.QrCodeScanner"></activity>
+        <activity android:name=".ui.Main.Topup.Detail.DetailTopup"></activity>
+        <activity android:name=".ui.Main.Topup.ListBank.Intro.IntroBankList" />
+        <activity android:name=".ui.Main.Topup.Intro.IntroTopup" />
+        <activity android:name=".ui.Main.Transaction.Detail.TransactionDetail" />
+        <activity android:name=".ui.Main.Content.QrCodeScanner.QrCodeScanner" />
         <activity android:name=".ui.Main.Content.YoutubePlayer.PlayYoutube" />
         <activity
             android:name="info.vividcode.android.zxing.CaptureActivity"
@@ -46,7 +49,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".ui.Main.Content.Detail.DetailContent"></activity>
+        <activity android:name=".ui.Main.Content.Detail.DetailContent" />
         <activity android:name=".ui.Main.Content.Intro.Content" />
         <activity android:name=".ui.Main.Transaction.Intro.IntroTransaction" />
         <activity android:name=".ui.Front.Splashscreen.Splashscreen">

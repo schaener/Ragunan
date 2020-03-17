@@ -27,12 +27,13 @@ import android.widget.Toast;
 import ragunan.javafirst.Notification.MyNotificationPublisher;
 import ragunan.javafirst.R;
 import ragunan.javafirst.ui.Main.Content.Intro.Content;
+import ragunan.javafirst.ui.Main.Topup.Intro.IntroTopup;
 import ragunan.javafirst.ui.Main.Transaction.Intro.IntroTransaction;
 
 public class Home extends AppCompatActivity {
 CardView btOn,btOff;
 RelativeLayout startJourney,buy;
-ImageView img;
+ImageView img,topup;
     BluetoothAdapter bluetoothAdapter = null;
     Thread thread;
     AlertDialog.Builder dialog;
@@ -48,6 +49,14 @@ ImageView img;
 //        btOn = findViewById(R.id.btOn);
 //        img = findViewById(R.id.gambar);
         startJourney = findViewById(R.id.BstartJourney);
+        topup = findViewById(R.id.topup);
+        topup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), IntroTopup.class);
+                startActivity(i);
+            }
+        });
 buy = findViewById(R.id.CVbuy);
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 if (!bluetoothAdapter.isEnabled()){
@@ -144,5 +153,6 @@ dialogg.dismiss();
 
         dialogg.show();
     }
+
 
 }
