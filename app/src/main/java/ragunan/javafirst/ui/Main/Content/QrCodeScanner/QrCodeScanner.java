@@ -4,55 +4,71 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 
+import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.Result;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 import ragunan.javafirst.R;
+import ragunan.javafirst.ui.Main.Transaction.Detail.TransactionDetail;
 
 public class QrCodeScanner extends AppCompatActivity  implements  ZXingScannerView.ResultHandler{
- ZXingScannerView scannerView;
-  boolean isCaptured = false;
+    FrameLayout barcodeOn;
+
+    private ZXingScannerView mScannerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr_code_scanner);
-    }
-
-    @Override
-    protected void onStart() {
-       scannerView.startCamera();
-        doRequestPermission();
-        super.onStart();
-    }
-public void doRequestPermission(){
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-        if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-            requestPermissions(new String[]{(Manifest.permission.CAMERA)}, 100);
-        }
-    }
-}
-
-
-    @Override
-    public void handleResult(Result result) {
+        mScannerView = new ZXingScannerView(QrCodeScanner.this);
+       setContentView(mScannerView);
 
     }
 
     @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
+    public void handleResult(Result rawResult) {
+        // Do something with the result here
+        Log.v("TAG", rawResult.getText()); // Prints scan results
+        // Prints the scan format (qrcode, pdf417 etc.)
+        Log.v("TAG", rawResult.getBarcodeFormat().toString());
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Scan Result");
+        builder.setMessage("Selamat Anda Dapat 500 coin. Segera Tukarkan untuk mendapatkan hadiah yang menarik");
+
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+finish();
+            }
+        });
+//        builder.setMessage(rawResult.getText());
+         AlertDialog alert1 = builder.create();
+        alert1.show();
+
+        // If you would like to resume scanning, call this method below:
 
     }
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Register ourselves as a handler for scan results.
+        mScannerView.setResultHandler(this);
+        mScannerView.startCamera();
+    }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode==100){
-            scannerView.startCamera();
-        }
+    public void onPause() {
+        super.onPause();
+        // Stop camera on pause
+        mScannerView.stopCamera();
     }
 }

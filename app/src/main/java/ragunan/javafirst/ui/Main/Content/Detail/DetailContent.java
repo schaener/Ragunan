@@ -48,13 +48,8 @@ ImageView Qr;
             @Override
             public void onClick(View view) {
                 // Membuat intent baru untuk memanggil CaptureActivity bawaan ZXing
-                Intent captureIntent = new Intent(DetailContent.this, CaptureActivity.class);
-
-                // Kemudian kita mengeset pesan yang akan ditampilkan ke user saat menjalankan QRCode scanning
-                CaptureActivityIntents.setPromptMessage(captureIntent, "Barcode scanning...");
-
-                // Melakukan startActivityForResult, untuk menangkap balikan hasil dari QR Code scanning
-                startActivityForResult(captureIntent, 0);
+        Intent i = new Intent(getApplicationContext(),QrCodeScanner.class);
+        startActivity(i);
             }
         });
     }
