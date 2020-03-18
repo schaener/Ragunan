@@ -41,8 +41,8 @@ action.setOnClickListener(new View.OnClickListener() {
     public void onClick(View view) {
         barcodeOff.setVisibility(View.GONE);
         mScannerView = new ZXingScannerView(IntroTransaction.this);
-//        setContentView(mScannerView);
-        barcodeOn.addView(mScannerView);
+       setContentView(mScannerView);
+     //   barcodeOn.addView(mScannerView);
         mScannerView.setResultHandler(IntroTransaction.this);
         // Start camera on resume
         mScannerView.startCamera();

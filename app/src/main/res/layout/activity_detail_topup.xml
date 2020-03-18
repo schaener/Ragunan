@@ -31,6 +31,7 @@
                 android:textSize="26sp" />
 
             <TextView
+                android:id="@+id/TVmoney"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -166,6 +167,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/bAlreadyTf"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_gravity="bottom"

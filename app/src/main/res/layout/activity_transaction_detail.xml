@@ -258,6 +258,7 @@
             </TextView>
 
             <TextView
+                android:id="@+id/TVmoney"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -276,6 +277,7 @@
         android:layout_weight="1">
 
         <RelativeLayout
+            android:id="@+id/payNow"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_alignParentBottom="true"
