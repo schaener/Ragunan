@@ -4,118 +4,132 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/bg2"
+    android:orientation="vertical"
     android:padding="25dp"
     tools:context=".ui.Main.Topup.Intro.IntroTopup">
+
     <androidx.cardview.widget.CardView
-        app:cardBackgroundColor="#6780D2 "
-        app:cardCornerRadius="25dp"
         android:layout_width="match_parent"
-        android:layout_height="70dp">
+        android:layout_height="70dp"
+        app:cardBackgroundColor="#6780D2 "
+        app:cardCornerRadius="25dp">
+
         <LinearLayout
-            android:padding="14dp"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="14dp">
 
             <TextView
-                android:textSize="26sp"
-                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="Saldo :"
 
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"></TextView>
-            <TextView
-                android:text="Rp. 100.000,-"
-                android:textSize="26sp"
                 android:textColor="#FFFFFF"
-                android:gravity="center"
-                android:layout_weight="1"
+                android:textSize="26sp" />
+
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Rp. 100.000,-"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp">
 
             </TextView>
-          </LinearLayout>
-    </androidx.cardview.widget.CardView>
-<TextView
-
-    android:layout_marginTop="10dp"
-    android:textStyle="bold"
-    android:textColor="#f333"
-    android:textSize="26sp"
-    android:text="Nominal Top Up"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"></TextView>
-    <androidx.cardview.widget.CardView
-        android:layout_marginTop="12dp"
-        app:cardBackgroundColor="#FFFFFF "
-        app:cardCornerRadius="25dp"
-        android:layout_width="match_parent"
-        android:layout_height="70dp">
-        <LinearLayout
-            android:padding="14dp"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-<EditText
-    android:id="@+id/nominalTopup"
-android:inputType="number"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-</EditText>
-            </LinearLayout>
-    </androidx.cardview.widget.CardView>
-    <TextView
-
-        android:layout_marginTop="10dp"
-        android:textStyle="bold"
-        android:textColor="#f333"
-        android:textSize="26sp"
-        android:text="Metode Pembayaran"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></TextView>
-    <androidx.cardview.widget.CardView
-        android:id="@+id/chooseMethod"
-        android:layout_marginTop="12dp"
-        app:cardBackgroundColor="#FFFFFF "
-        app:cardCornerRadius="25dp"
-        android:layout_width="match_parent"
-        android:layout_height="70dp">
-        <LinearLayout
-            android:padding="14dp"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-       <TextView
-           android:id="@+id/bankName"
-           android:textStyle="bold"
-           android:layout_weight="1"
-           android:textColor="#F333"
-           android:textSize="26sp"
-           android:gravity="center|left"
-           android:text="Pilih Metode"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"></TextView>
-        <ImageView
-
-            android:src="@drawable/arrowright"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"></ImageView>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <ImageView
-        android:id="@+id/bTopupRL"
-      android:src="@drawable/btntopup"
-android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
 
-    </ImageView>
-</RelativeLayout>
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Nominal Top Up"
+        android:textColor="#f333"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="#FFFFFF "
+        app:cardCornerRadius="25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="14dp">
+
+            <EditText
+                android:id="@+id/nominalTopup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number">
+
+            </EditText>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Metode Pembayaran"
+        android:textColor="#f333"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/chooseMethod"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="#FFFFFF "
+        app:cardCornerRadius="25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/bankName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:text="Pilih Metode"
+                android:textColor="#F333"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/arrowright" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/bTopupRL"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/btntopup">
+
+        </ImageView>
+    </RelativeLayout>
 </LinearLayout>

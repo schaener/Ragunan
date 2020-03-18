@@ -4,117 +4,135 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-
     android:background="@drawable/bg2"
+
+    android:orientation="vertical"
     tools:context=".ui.Main.Home.Home">
+
     <androidx.appcompat.widget.Toolbar
-        android:padding="14dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="14dp">
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="70dp">
+            android:layout_height="70dp"
+            android:orientation="horizontal">
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center|left"
                 android:fontFamily="sans-serif-black"
-                android:textSize="26sp"
-                android:textColor="#f333"
-                android:textStyle="bold"
                 android:text="Hello David"
+                android:textColor="#f333"
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:textSize="26sp"
+                android:textStyle="bold">
 
             </TextView>
+
             <LinearLayout
 
 
-                android:layout_weight="1"
-                android:gravity="right"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right">
+
                 <ImageView
 
 
-                    android:layout_gravity="center"
-                    android:src="@drawable/logotmii"
                     android:layout_width="70dp"
-                    android:layout_height="70dp"></ImageView>
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/logotmii" />
             </LinearLayout>
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
 
-<LinearLayout
-    android:padding="14dp"
-android:layout_marginTop="15dp"
-    android:orientation="vertical"
-    android:layout_weight="1"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<androidx.cardview.widget.CardView
-    app:cardBackgroundColor="#6780D2 "
-    app:cardCornerRadius="25dp"
-    android:layout_width="match_parent"
-    android:layout_height="70dp">
     <LinearLayout
-android:padding="14dp"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="14dp">
 
-        <TextView
-            android:textSize="26sp"
-            android:textColor="#FFFFFF"
-            android:gravity="center"
-            android:text="Saldo :"
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            app:cardBackgroundColor="#6780D2 "
+            app:cardCornerRadius="25dp">
 
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"></TextView>
-   <TextView
-       android:text="Rp. 100.000,-"
-       android:textSize="26sp"
-       android:textColor="#FFFFFF"
-       android:gravity="center"
-       android:layout_weight="1"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:padding="14dp">
 
-   </TextView>
-        <ImageView
-            android:src="@drawable/add"
-android:id="@+id/topup"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"></ImageView>
-    </LinearLayout>
-</androidx.cardview.widget.CardView>
-    <RelativeLayout
-        android:id="@+id/BstartJourney"
-        android:background="@drawable/startjourney"
-        android:layout_marginTop="20dp"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Saldo :"
 
-        android:layout_width="match_parent"
-        android:layout_height="170dp">
+                    android:textColor="#FFFFFF"
+                    android:textSize="26sp" />
 
-    </RelativeLayout>
-    <RelativeLayout
-android:padding="25dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/str_adt_duit"
+                    android:textColor="#FFFFFF"
+                    android:textSize="26sp">
+
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/topup"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/add" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <RelativeLayout
-            android:id="@+id/CVbuy"
-        android:layout_centerInParent="true"
-         android:background="@drawable/btnbeli"
-android:layout_weight="1"
+            android:id="@+id/BstartJourney"
             android:layout_width="match_parent"
-            android:layout_height="50dp">
+            android:layout_height="170dp"
 
-              </RelativeLayout>
-    </RelativeLayout>
-</LinearLayout>
+            android:layout_marginTop="20dp"
+            android:background="@drawable/startjourney">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CVbuy"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:backgroundTint="@color/blue"
+                app:cardCornerRadius="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/str_ah_beli"
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>

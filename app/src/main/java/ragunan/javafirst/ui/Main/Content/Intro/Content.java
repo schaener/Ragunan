@@ -64,6 +64,7 @@ public class Content extends AppCompatActivity implements OnMapReadyCallback, Lo
     private Marker mCurrentPosition = null;
     CameraPosition cameraPosition;
     Thread thread;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,13 +88,14 @@ public class Content extends AppCompatActivity implements OnMapReadyCallback, Lo
         mMap = googleMap;
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         unKnownLocation();
-startService();
+        startService();
 
 //        if (isProviderAvailable() && (provider != null)) {
 //            locateCurrentPosition();
 //        }
 
     }
+
     private BitmapDescriptor bitmapDescriptorFromVector(Context context, int vectorResId) {
         Drawable vectorDrawable = ContextCompat.getDrawable(context, vectorResId);
         vectorDrawable.setBounds(0, 0, vectorDrawable.getIntrinsicWidth(), vectorDrawable.getIntrinsicHeight());
@@ -102,6 +104,7 @@ startService();
         vectorDrawable.draw(canvas);
         return BitmapDescriptorFactory.fromBitmap(bitmap);
     }
+
     public void unKnownLocation() {
 
         mMap.addMarker(new MarkerOptions()
@@ -319,7 +322,8 @@ startService();
                 break;
         }
     }
-    public void bluetoothScanning(){
+
+    public void bluetoothScanning() {
 
         IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
         getApplicationContext().registerReceiver(mReceiver, filter);
@@ -328,35 +332,34 @@ startService();
 
     }
 
-public void startService(){
+    public void startService() {
 
 
-           thread = new Thread(new Runnable() {
+        thread = new Thread(new Runnable() {
 
-                    @Override
-                    public void run() {
-                        while (!Thread.interrupted())
-                            try {
-                                Thread.sleep(5000);
-                                runOnUiThread(new Runnable() // start actions in UI thread
-                                {
+            @Override
+            public void run() {
+                while (!Thread.interrupted())
+                    try {
+                        Thread.sleep(5000);
+                        runOnUiThread(new Runnable() // start actions in UI thread
+                        {
 
-                                    @Override
-                                    public void run() {
+                            @Override
+                            public void run() {
 
-                                        bluetoothScanning();
+                                bluetoothScanning();
 
 
-                                    }
-                                });
-                            } catch (InterruptedException e) {
-                                // ooops
                             }
+                        });
+                    } catch (InterruptedException e) {
+                        // ooops
                     }
-                });
-           thread.start();
             }
-
+        });
+        thread.start();
+    }
 
 
     // Create a BroadcastReceiver for ACTION_FOUND.
@@ -370,14 +373,13 @@ public void startService(){
                 String deviceName = device.getName();
                 String deviceHardwareAddress = device.getAddress(); // MAC address
 //                Toast.makeText(getApplicationContext(),"Device Name: " + "device " + deviceName,Toast.LENGTH_SHORT).show();
-              scheduleNotification(getNotification( deviceName+" Ditemukan. Kamu berada di kandang jerapah" ) , 1000 ) ;
-                Log.d("mac address",deviceHardwareAddress);
-                if (deviceHardwareAddress.equals("E0:50:E4:E6:6E:Q2")){
+                scheduleNotification(getNotification(" Ditemukan. Kamu berada di " + deviceName ), 1000);
+                Log.d("mac address", deviceHardwareAddress);
+                if (deviceHardwareAddress.equals("E0:50:E4:E6:6E:Q2")) {
                     content.setVisibility(View.VISIBLE);
 
-                }
-                else {
-                 //   img.setImageResource(R.drawable.jerapah);
+                } else {
+                    //   img.setImageResource(R.drawable.jerapah);
                     content.setVisibility(View.VISIBLE);
 
                 }
@@ -386,23 +388,24 @@ public void startService(){
         }
     };
 
-    private void scheduleNotification (Notification notification , int delay) {
-        Intent notificationIntent = new Intent( this, MyNotificationPublisher.class ) ;
-        notificationIntent.putExtra(MyNotificationPublisher. NOTIFICATION_ID , 1 ) ;
-        notificationIntent.putExtra(MyNotificationPublisher. NOTIFICATION , notification) ;
-        PendingIntent pendingIntent = PendingIntent. getBroadcast ( this, 0 , notificationIntent , PendingIntent. FLAG_UPDATE_CURRENT ) ;
-        long futureInMillis = SystemClock. elapsedRealtime () + delay ;
-        AlarmManager alarmManager = (AlarmManager) getSystemService(Context. ALARM_SERVICE ) ;
+    private void scheduleNotification(Notification notification, int delay) {
+        Intent notificationIntent = new Intent(this, MyNotificationPublisher.class);
+        notificationIntent.putExtra(MyNotificationPublisher.NOTIFICATION_ID, 1);
+        notificationIntent.putExtra(MyNotificationPublisher.NOTIFICATION, notification);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        long futureInMillis = SystemClock.elapsedRealtime() + delay;
+        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         assert alarmManager != null;
-        alarmManager.set(AlarmManager. ELAPSED_REALTIME_WAKEUP , futureInMillis , pendingIntent) ;
+        alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, futureInMillis, pendingIntent);
     }
-    private Notification getNotification (String content) {
-        NotificationCompat.Builder builder = new NotificationCompat.Builder( this, "default") ;
-        builder.setContentTitle( "Pemberitahuan" ) ;
-        builder.setContentText(content) ;
-        builder.setSmallIcon(R.drawable.ic_launcher_foreground ) ;
-        builder.setAutoCancel( true ) ;
-        builder.setChannelId( "10001") ;
-        return builder.build() ;
+
+    private Notification getNotification(String content) {
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "default");
+        builder.setContentTitle("Pemberitahuan");
+        builder.setContentText(content);
+        builder.setSmallIcon(R.drawable.ic_launcher_foreground);
+        builder.setAutoCancel(true);
+        builder.setChannelId("10001");
+        return builder.build();
     }
 }

@@ -7,134 +7,147 @@
     android:orientation="vertical"
     android:padding="40dp"
     tools:context=".ui.Main.Transaction.Intro.IntroTransaction">
+
     <LinearLayout
 
-        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
         <ImageView
 
-            android:src="@drawable/tmiipass"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></ImageView>
+            android:layout_height="match_parent"
+            android:src="@drawable/tmiipass" />
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
-        app:cardCornerRadius="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
         android:layout_marginTop="18dp"
         app:cardBackgroundColor="#F1F1F1"
-        android:layout_width="match_parent"
-        android:layout_height="100dp">
+        app:cardCornerRadius="25dp">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
             <LinearLayout
-                android:layout_weight="1"
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
                 <TextView
-                    android:textStyle="bold"
-                    android:textSize="20dp"
-                    android:textColor="#F333"
-                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="Item"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"></TextView>
-                <TextView
-                    android:textStyle="bold"
-                    android:textSize="23dp"
                     android:textColor="#F333"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:text="KeyChain"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"></TextView>
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="KeyChain"
+                    android:textColor="#F333"
+                    android:textSize="23dp"
+                    android:textStyle="bold" />
 
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_weight="1"
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
                 <TextView
-                    android:textStyle="bold"
-                    android:textSize="20dp"
-                    android:textColor="#F333"
-                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="Qty"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"></TextView>
-                <TextView
-                    android:textStyle="bold"
-                    android:textSize="23dp"
                     android:textColor="#F333"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:text="5"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"></TextView>
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="5"
+                    android:textColor="#F333"
+                    android:textSize="23dp"
+                    android:textStyle="bold" />
 
 
             </LinearLayout>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView
-android:layout_marginTop="18dp"
-      app:cardCornerRadius="25dp"
-        app:cardBackgroundColor="#B7B7B7"
-        android:layout_width="match_parent"
-        android:layout_height="60dp">
-<LinearLayout
-    android:padding="12dp"
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:layout_weight="1"
-    android:textColor="#ffffff"
-    android:textSize="20sp"
-    android:gravity="center|left"
-    android:text="Total"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-</TextView>
-    <TextView
-        android:layout_weight="1"
-        android:textColor="#ffffff"
-        android:textSize="23sp"
-        android:gravity="center|right"
-        android:text="Rp. 120.000"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </TextView>
-</LinearLayout>
-    </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
-        app:cardCornerRadius="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
         android:layout_marginTop="18dp"
-        app:cardBackgroundColor="#E6E6E6"
-        android:layout_width="match_parent"
-        android:layout_height="100dp">
+        app:cardBackgroundColor="#B7B7B7"
+        app:cardCornerRadius="25dp">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <LinearLayout
-                android:layout_weight="1"
-                android:orientation="horizontal"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:text="Total"
+                android:textColor="#ffffff"
+                android:textSize="20sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|right"
+                android:text="Rp. 120.000"
+                android:textColor="#ffffff"
+                android:textSize="23sp">
+
+            </TextView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="18dp"
+        app:cardBackgroundColor="#E6E6E6"
+        app:cardCornerRadius="25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -144,119 +157,130 @@ android:layout_marginTop="18dp"
                     android:text="Name"
                     android:textColor="#F333"
                     android:textSize="20dp"
-                    android:textStyle="bold"></TextView>
+                    android:textStyle="bold" />
+
                 <TextView
-                    android:textStyle="bold"
-                    android:textSize="23dp"
-                    android:textColor="#F333"
-                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="David"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"></TextView>
+                    android:textColor="#F333"
+                    android:textSize="23dp"
+                    android:textStyle="bold" />
 
 
             </LinearLayout>
+
             <LinearLayout
-                android:layout_weight="1"
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
                 <TextView
-                    android:textStyle="bold"
-                    android:textSize="20dp"
-                    android:textColor="#F333"
-                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="Date"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"></TextView>
-                <TextView
-                    android:textStyle="bold"
-                    android:textSize="23dp"
                     android:textColor="#F333"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:text="12/12/2019"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"></TextView>
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="12/12/2019"
+                    android:textColor="#F333"
+                    android:textSize="23dp"
+                    android:textStyle="bold" />
 
 
             </LinearLayout>
+
             <LinearLayout
-                android:layout_weight="1"
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
                 <TextView
-                    android:textStyle="bold"
-                    android:textSize="20dp"
-                    android:textColor="#F333"
-                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:text="Valid Until"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"></TextView>
-                <TextView
-                    android:textStyle="bold"
-                    android:textSize="23dp"
                     android:textColor="#F333"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:text="01/02/2020"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"></TextView>
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="01/02/2020"
+                    android:textColor="#F333"
+                    android:textSize="23dp"
+                    android:textStyle="bold" />
 
 
             </LinearLayout>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
-        android:layout_marginTop="18dp"
-        app:cardCornerRadius="25dp"
-        app:cardBackgroundColor="#B7B7B7"
         android:layout_width="match_parent"
-        android:layout_height="60dp">
+        android:layout_height="60dp"
+        android:layout_marginTop="18dp"
+        app:cardBackgroundColor="#B7B7B7"
+        app:cardCornerRadius="25dp">
+
         <LinearLayout
-            android:padding="12dp"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textColor="#ffffff"
-                android:textSize="20sp"
                 android:gravity="center|left"
                 android:text="Saldo :"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:textColor="#ffffff"
+                android:textSize="20sp">
 
             </TextView>
+
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textColor="#ffffff"
-                android:textSize="23sp"
                 android:gravity="center|right"
                 android:text="Rp. 120.000"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:textColor="#ffffff"
+                android:textSize="23sp">
 
             </TextView>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <RelativeLayout
-        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
 
         <RelativeLayout
-            android:layout_alignParentBottom="true"
-            android:background="@drawable/btnpaynow"
-            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="60dp">
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@drawable/btnpaynow">
 
         </RelativeLayout>
     </RelativeLayout>

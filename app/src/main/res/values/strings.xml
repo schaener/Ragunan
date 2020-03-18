@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">TMII</string>
+    <string name="str_adc_jerapah">Jerapah atau zarafah (nama ilmiah: Giraffa camelopardalis) adalah mamalia berkuku genap endemik Afrika dan merupakan spesies hewan tertinggi yang hidup di darat. Jerapah jantan dapat mencapai tinggi 4,8 sampai 5,5 meter dan memiliki berat yang dapat mencapai 1.360 kilogram. Jerapah betina biasanya sedikit lebih pendek dan lebih ringan. Jerapah berkerabat dengan rusa dan sapi tetapi dari suku yang berbeda, yaitu Giraffidae yang mencakup jerapah sendiri dan kerabat terdekatnya, okapi. Habitat aslinya mencakup area dari Chad sampai dengan Afrika Selatan Nama spesiesnya camelopardalis diambil dari nama dalam latin, karena dianggap sebagai bastar unta (camel) dan macan tutul (leopard). Nama camelopardalis dipakai oleh Plinius senior dalam ensiklopedia yang ditulisnya. Nama ini juga dipakai sebagai nama salah satu rasi bintang. Nama "jerapah" sendiri dipinjam dari nama hewan ini dalam bahasa Arab (الزرافة, zirafah). </string>
+
+    <string name="str_adt_duit">Rp. 100.000,-</string>
+    <string name="str_adt_bukti"><b>Bukti</b></string>
+    <string name="str_adt_tf"><b>Sudah transfer</b></string>
+
+    <string name="str_ah_beli">Beli</string>
 </resources>

@@ -6,10 +6,12 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg1"
     tools:context=".ui.Front.Splashscreen.Splashscreen">
-<ImageView
-    android:padding="25dp"
-    android:src="@drawable/logotmii"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="25dp"
+        android:layout_margin="50dp"
+        android:src="@drawable/logotmii" />
 
 </RelativeLayout>
