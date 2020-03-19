@@ -46,4 +46,13 @@ public class Splashscreen extends AppCompatActivity {
     public void onBackPressed() {
 
     }
-}
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (shared.getString( SP_MONEY , "").equals("")){
+
+            sharedPrefManager.saveSPString(SharedPrefManager.SP_MONEY , "0");
+
+    }
+}}

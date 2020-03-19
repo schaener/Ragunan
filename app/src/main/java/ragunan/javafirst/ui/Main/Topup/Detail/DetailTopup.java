@@ -47,7 +47,7 @@ ScriptHelper helper = new ScriptHelper();
                 int result = (Integer.valueOf(shared.getString( SP_MONEY , ""))
                         +(Integer.valueOf(GlobalVariabels.nominalTopupstr)));
                 sharedPrefManager.saveSPString(SharedPrefManager.SP_MONEY , String.valueOf(result));
-
+GlobalVariabels.nominalTopupstr="";
                 Intent i = new Intent(getApplicationContext(), Home.class);
                 i.addFlags(FLAG_ACTIVITY_CLEAR_TOP);
              startActivity(i);
