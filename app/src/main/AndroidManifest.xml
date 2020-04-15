@@ -21,7 +21,12 @@
         android:roundIcon="@drawable/logotmii"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.Main.Topup.Detail.DetailTopup"></activity>
+        <activity android:name=".ui.Front.Register.Intro.IntroRegister">
+
+
+
+        </activity>
+        <activity android:name=".ui.Main.Topup.Detail.DetailTopup" />
         <activity android:name=".ui.Main.Topup.ListBank.Intro.IntroBankList" />
         <activity android:name=".ui.Main.Topup.Intro.IntroTopup" />
         <activity android:name=".ui.Main.Transaction.Detail.TransactionDetail" />

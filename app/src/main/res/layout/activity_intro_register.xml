@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2"
+    android:padding="20dp"
+    tools:context=".ui.Front.Register.Intro.IntroRegister">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+android:id="@+id/bg"
+android:layout_marginTop="5dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+      android:layout_centerHorizontal="true"
+
+        android:src="@drawable/logotmii" />
+    <EditText
+        android:textColor="#f333"
+        android:textColorHint="#f333"
+        android:gravity="center"
+        android:id="@+id/ETname"
+    android:hint="Nama"
+        android:background="@drawable/rounded_edittext"
+        android:layout_below="@id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"></EditText>
+        <EditText
+            android:textColor="#f333"
+            android:textColorHint="#f333"
+            android:gravity="center"
+            android:id="@+id/ETemail"
+            android:layout_marginTop="15dp"
+            android:hint="Email"
+            android:background="@drawable/rounded_edittext"
+            android:layout_below="@id/ETname"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"></EditText>
+
+        <EditText
+        android:textColor="#f333"
+        android:textColorHint="#f333"
+        android:gravity="center"
+        android:id="@+id/ETalamat"
+        android:layout_marginTop="15dp"
+        android:hint="Alamat"
+        android:background="@drawable/rounded_edittext"
+        android:layout_below="@id/ETemail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"></EditText>
+    <Spinner
+        android:textColor="#f333"
+        android:textColorHint="#f333"
+        android:gravity="center"
+        android:id="@+id/ETjeniskelamin"
+        android:layout_marginTop="15dp"
+        android:hint="Jenis Kelamin"
+        android:background="@drawable/rounded_edittext"
+        android:layout_below="@id/ETalamat"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"></Spinner>
+    <EditText
+        android:inputType="number"
+        android:textColor="#f333"
+        android:textColorHint="#f333"
+        android:gravity="center"
+        android:id="@+id/ETnohp"
+        android:layout_marginTop="15dp"
+        android:hint="Hp"
+        android:background="@drawable/rounded_edittext"
+        android:layout_below="@id/ETjeniskelamin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"></EditText>
+    <EditText
+        android:editable="false"
+        android:textColor="#f333"
+        android:textColorHint="#f333"
+        android:gravity="center"
+        android:id="@+id/ETtanggallahir"
+        android:layout_marginTop="15dp"
+        android:hint="Tanggal Lahir"
+        android:background="@drawable/rounded_edittext"
+        android:layout_below="@id/ETnohp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"></EditText>
+    <EditText
+        android:textColor="#f333"
+        android:textColorHint="#f333"
+        android:gravity="center"
+        android:inputType="textPassword"
+        android:id="@+id/ETpassword"
+        android:layout_marginTop="15dp"
+        android:hint="Password"
+        android:background="@drawable/rounded_edittext"
+        android:layout_below="@id/ETtanggallahir"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"></EditText>
+    <TextView
+        android:id="@+id/txt1"
+        android:textColor="#F333"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ETpassword"
+        android:text="Saat anda mendaftar, berarti anda menyetujui syarat dan ketentuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="10dp"
+        android:id="@+id/Bregister"
+        android:backgroundTint="@color/blue"
+        app:cardCornerRadius="25dp"
+     android:layout_below="@id/txt1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+<TextView
+    android:gravity="center"
+    android:text="Daftar"
+    android:textColor="#FFFFFF"
+    android:textSize="20dp"
+    android:textStyle="bold"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"></TextView>
+
+    </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</ScrollView>

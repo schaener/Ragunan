@@ -9,6 +9,7 @@ import android.os.Handler;
 
 import ragunan.javafirst.R;
 import ragunan.javafirst.Utils.SharedPrefManager;
+import ragunan.javafirst.ui.Front.Register.Intro.IntroRegister;
 import ragunan.javafirst.ui.Main.Home.Home;
 
 import static ragunan.javafirst.Utils.SharedPrefManager.SP_MONEY;
@@ -35,7 +36,7 @@ public class Splashscreen extends AppCompatActivity {
 
                 }
                 //setelah loading maka akan langsung berpindah ke home activity
-                Intent home=new Intent(Splashscreen.this, Home.class);
+                Intent home=new Intent(Splashscreen.this, IntroRegister.class);
                 startActivity(home);
                 finish();
 
